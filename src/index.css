@@ -1,0 +1,134 @@
+
+/* Import multiple fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+@import "tailwindcss";
+
+/* index.css */
+
+html { scroll-behavior: smooth; }
+
+/* Ensure anchored sections don't hide behind sticky header */
+[id] { scroll-margin-top: 4rem; }
+
+/* Global reset */
+* {
+  
+  box-sizing: border-box;
+}
+
+/* Body text uses Inter */
+:root{
+  /* Light theme variables */
+  --background-color: #f9f9f9;
+  --text-color: #111827;
+  --heading-color: #bdb7b7;
+  --primary-color: #6366f1;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/* Headings use Roboto */
+  
+/* Example utility classes */
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+  /* index.css or App.css */
+.backdrop-blur {
+  backdrop-filter: blur(10px);       /* Apply blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+}
+
+.backdrop-effects {
+  backdrop-filter: blur(8px) brightness(0.8) contrast(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(0.8) contrast(1.2);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.teal {
+  color: #008080;
+}
+.black {
+  color: #000000;
+}
+.white {
+  color: #FFFFFF;
+}
+
+
+
+.my-text {
+  text-shadow: 
+    2px 2px 4px #000000,   /* black shadow */
+    -2px -2px 4px #FFFFFF; /* white shadow */
+}
+
+.my-box {
+  box-shadow: 
+    4px 4px 10px #000000,  /* black shadow */
+    -4px -4px 10px #FFFFFF; /* white shadow */
+}
+
+:root{
+--black: #000000ff;
+--grey: #80807eff;
+--silver: #a0a09eff;
+--silver-2: #b0b0aeff;
+--silver-3: #c0c0bdff;
+--alabaster-grey: #e0e0ddff;
+--white-smoke: #f0f0edff;
+--porcelain: #f8f8f5ff;
+--porcelain-2: #fcfcf9ff;
+--porcelain-3: #fffffcff;}
+
+.dark {
+  --background-color: #111827;
+  --text-color: #f9fafb;
+  --heading-color: #9CA3AF;
+  --primary-color: #6366f1;
+  --secondary-color: #1f2937;
+  --border-color: #374151;
+}
