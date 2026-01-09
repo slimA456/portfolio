@@ -258,7 +258,7 @@ const handleSubmit = async (e) => {
     whileInView={{opacity:1, y:0}}
     transition={{duration:1,ease: "easeOut"}}
     viewport={{once:true, amount:0.2}}
-       className="flex flex-col w-full sm:max-w-md lg:max-w-2xl m-4 sm:m-12 mx-auto px-4"
+       className="flex flex-col w-full p-4 sm:p-6 lg:p-8"
        onSubmit={handleSubmit}
        noValidate>
         {serverMessage && (
@@ -282,7 +282,7 @@ const handleSubmit = async (e) => {
         <span 
         className="font-bold mt-4"
         >Your Name</span>
-        <input name="name" type="text" placeholder="John Doe" className="border rounded-xl h-12 px-2"
+        <input name="name" type="text" placeholder="John Doe" className="border rounded-xl h-12 px-3 w-full text-sm sm:text-base"
         onChange={handleChange}
         onBlur={validateField}
         value={formData.name} />
@@ -298,7 +298,7 @@ const handleSubmit = async (e) => {
         )}
 
         <span className="font-bold mt-4">Email Address</span>
-        <input name="email" type="email" placeholder="john@example.com" className="border rounded-xl h-12 px-2" 
+        <input name="email" type="email" placeholder="john@example.com" className="border rounded-xl h-12 px-3 w-full text-sm sm:text-base" 
         onChange={handleChange}
         value={formData.email}
         onBlur={validateField}  />
@@ -319,24 +319,25 @@ const handleSubmit = async (e) => {
         value={formData.message}
         onBlur={validateField}
         onChange={handleChange}
-        className={`border rounded-xl p-2 min-h-24 md:min-h-32 w-full mt-1 ${errors.message ? 'border-red-500' : 'border-gray-300'}`}
+        className={`border rounded-xl p-3 min-h-24 sm:min-h-28 md:min-h-32 w-full mt-1 text-sm sm:text-base resize-none ${errors.message ? 'border-red-500' : 'border-gray-300'}`}
         ></textarea>
 
         <p className="font-bold  rounded-xl mt-2 space-mono-regular">
           Please include: project scope, tech stack, timeline, and budget/compensation
         </p>
         <motion.div
-       whileHover={{ scale: 1.1 }}
+       whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         
-        className='w-full h-12 bg-(--silver-3) mt-4 rounded-xl '> 
+        className='w-full h-12 bg-(--silver-3) mt-4 rounded-xl'> 
           <button
       type="submit"
       disabled={isSubmitting}
-      className="font-bold w-full h-full flex items-center justify-center p-2 gap-4 backdrop-blur disabled:opacity-50 disabled:cursor-not-allowed"
+      className="font-bold w-full h-full flex items-center justify-center px-3 py-2 gap-2 sm:gap-4 backdrop-blur disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base whitespace-nowrap"
     >
-      {isSubmitting ? 'Sending...' : 'Submit Form'}
-      <TbBrandTelegram size={25} />
+      <span className="hidden sm:inline">{isSubmitting ? 'Sending...' : 'Submit Form'}</span>
+      <span className="sm:hidden">{isSubmitting ? 'Sending' : 'Submit'}</span>
+      <TbBrandTelegram size={20} className="shrink-0" />
     </button>
         </motion.div>
       </motion.form>
